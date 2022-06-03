@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>kadir</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+
+
+</head>
+<body>
+<style>
+    .kisiSil {
+        width: 100px;
+        height: 20px;
+        background-color: red;
+        color: white;
+    }
+</style>
+
+<table id="myTable1" class="table table-responsive" style="width: 100%; text-align: center;   ">
+    <thead>
+    <tr>
+        <th>İsim</th>
+        <th>Soyisim</th>
+        <th>Bölüm</th>
+        <th>Sınıf</th>
+        <th>Yaş</th>
+        <th>Cinsiyet</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id="body">
+    <tr id="kisi1">
+        <td>Kadir</td>
+        <td>Kuzu</td>
+        <td>Bilgisayar</td>
+        <td>1</td>
+        <td>21</td>
+        <td>Erkek</td>
+        <td>
+            <button id="KisiSil" onclick="kisiSilme('kisi1')" class="kisiSil"
+                    style="width: 100px ; height: 20px ;background-color: red; color: white;">Kişi sil
+            </button>
+        </td>
+    </tr>
+    <tr id="kisi2">
+        <td>Çağlar</td>
+        <td>Kantarcıoğlu</td>
+        <td>Bilgisayar</td>
+        <td>1</td>
+        <td>20</td>
+        <td>Erkek</td>
+        <td>
+            <button onclick="kisiSilme('kisi2')" class="kisiSil"
+                    style="width: 100px ; height: 20px ;background-color: red; color: white;">Kişi sil
+            </button>
+        </td>
+    </tr>
+    <tr id="kisi3">
+        <td>Ahmet</td>
+        <td>Aker</td>
+        <td>Bilgisayar</td>
+        <td>1</td>
+        <td>20</td>
+        <td>Erkek</td>
+        <td>
+            <button onclick="kisiSilme('kisi3')" class="kisiSil"
+                    style="width: 100px ; height: 20px ;background-color: red; color: white;">Kişi sil
+            </button>
+        </td>
+    </tr>
+    <tr id="kisi4">
+        <td>Onur</td>
+        <td>Sürmeli</td>
+        <td>Bilgisayar</td>
+        <td>1</td>
+        <td>21</td>
+        <td>Erkek</td>
+        <td>
+            <button onclick="kisiSilme('kisi4')" class="kisiSil"
+                    style="width: 100px ; height: 20px ;background-color: red; color: white;">Kişi sil
+            </button>
+        </td>
+    </tr>
+    <tr id="kisi5">
+        <td>Ahmet</td>
+        <td>Yasa</td>
+        <td>Bilgisayar</td>
+        <td>1</td>
+        <td>20</td>
+        <td>?</td>
+        <td>
+            <button onclick="kisiSilme('kisi5')" class="kisiSil"
+                    style="width: 100px ; height: 20px ;background-color: red; color: white;">Kişi sil
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div style="background-color: black; width: 300px; height: 300px; border-radius: 10px ">
+    <label style="color: white;margin-left: 10px;">İsim :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+        id="isim1" style="margin-top: 10px;"><br><br>
+    <label style="color: white;margin-left: 10px;">Soyisim :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+        id=soyisim1><br><br>
+    <label style="color: white;margin-left: 10px;">Bölüm :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+        id="bölüm1"><br><br>
+    <label style="color: white;margin-left: 10px;">Sınıf :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+        id="sınıf1"><br><br>
+    <label style="color: white;margin-left: 10px;">Yaş :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+        id="yaş1"><br><br>
+    <label style="color: white;margin-left: 10px;">Cinsiyet :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+        id="cinsiyet1"><br><br>
+    <button onclick="kisiEkleme();" id="kisiEkle"
+            style="width: 200px ; height: 40px ;background-color: green ; color: white; border-radius: 5px; margin-left: 45px;">
+        KİŞİ EKLE
+    </button>
+    <br><br>
+</div>
+<script>$('#myTable1').DataTable();</script>
+
+<script src="KişiTablosu.js"></script>
+
+
+</body>
+</html>
